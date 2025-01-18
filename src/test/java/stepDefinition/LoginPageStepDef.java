@@ -52,7 +52,7 @@ public class LoginPageStepDef {
 	}
 	
 	@Given("I have entered invalid {string} and {string}")
-	public void i_have_entered_invalid_and(String username, String password) {
+	public void i_have_entered_invalid_username_and_password(String username, String password) {
 		loginPage.enterEmail(username);
 	    loginPage.enterPassword(password);
 	}
@@ -64,11 +64,11 @@ public class LoginPageStepDef {
 
 	@Then("I should see an error message indicating  {string}")
 	public void i_should_see_an_error_message_indicating(String errorMessage) {
-	    Assert.assertEquals( driver.findElement(By.cssSelector(".alert-danger")).isDisplayed(), true);
+	    Assert.assertEquals(driver.findElement(By.cssSelector(".alert-danger")).isDisplayed(), true);
 	}
 
 	@When("I click on the \"Forgotten Password\" link")
-	public void i_click_on_the_link() {
+	public void i_click_on_the_forgotten_password_link() {
 	    loginPage.clickForgottenPasswordLink();
 	}
 

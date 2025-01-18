@@ -40,7 +40,6 @@ public class LoginPage {
 	
 	public boolean checkForgottenPwdLink() {
 		return driver.findElement(forgottenPassswordLinkLocator).isDisplayed();
-		
 	}
 	
 	public boolean checkLogoutLink() {
